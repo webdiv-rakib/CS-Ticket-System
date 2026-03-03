@@ -5,8 +5,8 @@ const Footer = () => {
         <div>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 md:grid md:grid-cols-4 justify-self-center md:px-30 md:mt-20 md:gap-50 mt-10">
                 <div>
-                    <h1 className='text-2xl font-semibold'>CS--Ticket System</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cupiditate tempore error optio. Nobis nam eum doloribus ratione totam ipsa voluptatum assumenda ipsum, nesciunt at, ad, vero qui aliquam nisi. Nulla nihil doloribus rem iusto laudantium consequatur temporibus ipsam sequi ab tempora doloremque ullam quasi accusamus, tempore error architecto minus.</p>
+                    <h1 className='text-2xl font-semibold'>CS Ticket System</h1>
+                    <p>The Ticket System is a professional, React-based customer support dashboard designed to manage and track service requests through a dynamic workflow. It follows a clean, Figma-inspired design that prioritizes high scannability and real-time status updates.</p>
                 </div>
                 <nav>
                     <h6 className="footer-title text-2xl font-semibold">Services</h6>
