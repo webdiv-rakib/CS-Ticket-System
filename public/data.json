@@ -1,0 +1,182 @@
+[
+    {
+        "id": "TKT-001",
+        "title": "Login Authentication Error",
+        "description": "User unable to access dashboard due to 401 Unauthorized error on valid credentials.",
+        "customer": "Ariful Islam",
+        "priority": "High",
+        "status": "Available",
+        "createdAt": "2024-05-10T09:00:00Z"
+    },
+    {
+        "id": "TKT-002",
+        "title": "Payment Gateway Timeout",
+        "description": "Stripe integration failing at the final checkout step for international cards.",
+        "customer": "Sarah Jenkins",
+        "priority": "Critical",
+        "status": "Available",
+        "createdAt": "2024-05-10T09:45:00Z"
+    },
+    {
+        "id": "TKT-003",
+        "title": "Profile Picture Upload Fail",
+        "description": "Users report that JPEG images larger than 2MB are being rejected without error messages.",
+        "customer": "Tanvir Ahmed",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-10T10:15:00Z"
+    },
+    {
+        "id": "TKT-004",
+        "title": "Incorrect Invoice Totals",
+        "description": "The PDF invoice generated shows the pre-tax amount instead of the total amount.",
+        "customer": "Emily Watson",
+        "priority": "High",
+        "status": "Available",
+        "createdAt": "2024-05-10T11:05:00Z"
+    },
+    {
+        "id": "TKT-005",
+        "title": "Dark Mode Toggle Bug",
+        "description": "Switching to dark mode does not change the background color of the sidebar.",
+        "customer": "Rakib Hossain",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-11T08:20:00Z"
+    },
+    {
+        "id": "TKT-006",
+        "title": "Password Reset Link Expired",
+        "description": "Password reset emails are arriving with links that are already invalid.",
+        "customer": "Jessica Miller",
+        "priority": "High",
+        "status": "Available",
+        "createdAt": "2024-05-11T13:40:00Z"
+    },
+    {
+        "id": "TKT-007",
+        "title": "Slow Dashboard Loading",
+        "description": "Initial data fetch for the main dashboard takes over 8 seconds.",
+        "customer": "David Chen",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-11T14:10:00Z"
+    },
+    {
+        "id": "TKT-008",
+        "title": "Missing Search Filter",
+        "description": "The filter by date range is missing from the transaction history page.",
+        "customer": "Nusrat Jahan",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-12T09:30:00Z"
+    },
+    {
+        "id": "TKT-009",
+        "title": "API Documentation Access",
+        "description": "Developer portal is returning a 404 for the API endpoints documentation page.",
+        "customer": "Alex Thompson",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-12T10:50:00Z"
+    },
+    {
+        "id": "TKT-010",
+        "title": "Mobile Responsiveness Issue",
+        "description": "Navbar overlaps with the banner on iPhone 13 screen sizes.",
+        "customer": "Samiul Haque",
+        "priority": "High",
+        "status": "Available",
+        "createdAt": "2024-05-12T11:15:00Z"
+    },
+    {
+        "id": "TKT-011",
+        "title": "Broken Links in Footer",
+        "description": "The Privacy Policy link leads to a blank page.",
+        "customer": "Linda Garcia",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-12T15:20:00Z"
+    },
+    {
+        "id": "TKT-012",
+        "title": "Duplicate Notification Alerts",
+        "description": "Users receive the same push notification three times per event.",
+        "customer": "Fahim Shahriar",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-13T08:45:00Z"
+    },
+    {
+        "id": "TKT-013",
+        "title": "Database Connection Leak",
+        "description": "Service crashes periodically due to too many open connections.",
+        "customer": "Robert Brown",
+        "priority": "Critical",
+        "status": "Available",
+        "createdAt": "2024-05-13T09:10:00Z"
+    },
+    {
+        "id": "TKT-014",
+        "title": "Email Subject Encoding",
+        "description": "Special characters in the subject line appear as garbled text.",
+        "customer": "Maria Rodriguez",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-13T10:05:00Z"
+    },
+    {
+        "id": "TKT-015",
+        "title": "Translation Error - Spanish",
+        "description": "The 'Submit' button is incorrectly translated as 'Enviar' in some sections.",
+        "customer": "Carlos Ruiz",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-13T11:40:00Z"
+    },
+    {
+        "id": "TKT-016",
+        "title": "Bulk Upload Failure",
+        "description": "CSV upload fails when the file contains more than 100 rows.",
+        "customer": "Abir Hasan",
+        "priority": "High",
+        "status": "Available",
+        "createdAt": "2024-05-14T09:00:00Z"
+    },
+    {
+        "id": "TKT-017",
+        "title": "White Screen on Startup",
+        "description": "Some Safari users report a white screen upon loading the application.",
+        "customer": "Karen White",
+        "priority": "Critical",
+        "status": "Available",
+        "createdAt": "2024-05-14T10:30:00Z"
+    },
+    {
+        "id": "TKT-018",
+        "title": "Export to Excel Missing Data",
+        "description": "The 'Notes' column is empty in the exported Excel file.",
+        "customer": "James Wilson",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-14T12:15:00Z"
+    },
+    {
+        "id": "TKT-019",
+        "title": "Icon Alignment Issue",
+        "description": "The 'New Ticket' icon is slightly shifted to the right in the sidebar.",
+        "customer": "Mehedi Hasan",
+        "priority": "Low",
+        "status": "Available",
+        "createdAt": "2024-05-14T14:45:00Z"
+    },
+    {
+        "id": "TKT-020",
+        "title": "Session Timeout Too Short",
+        "description": "Users are being logged out after only 5 minutes of inactivity.",
+        "customer": "Sophia Lee",
+        "priority": "Medium",
+        "status": "Available",
+        "createdAt": "2024-05-14T16:00:00Z"
+    }
+]
