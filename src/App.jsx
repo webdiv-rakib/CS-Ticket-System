@@ -72,12 +72,12 @@ function App() {
       <Hero
         inProgressCount={inProgress.length} resolveCount={resolve.length}></Hero>
 
-      <CustomerTickets
+      {/* <CustomerTickets
         tickets={tickets}
         handleAddToInProgress={handleAddToInProgress}
         inProgress={inProgress}
         resolve={resolve}
-        handleComplete={handleComplete}></CustomerTickets>
+        handleComplete={handleComplete}></CustomerTickets> */}
 
       <Footer></Footer>
     </>
