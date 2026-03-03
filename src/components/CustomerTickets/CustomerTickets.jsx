@@ -1,8 +1,7 @@
 import CustomerTicket from '../CustomerTicket/CustomerTicket';
 import Task from '../Task/Task';
 
-
-const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete }) => {
+const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inProgress }) => {
     return (
         <div className='flex justify-between gap-10 px-30 mt-10'>
             <div className='md:w-3/4'>
@@ -17,7 +16,13 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete }) => 
                 <div>
                     <h1 className='text-2xl font-semibold'>Task Status</h1>
                     <p className='text-gray-400'>Select a ticket to add to Task Status</p>
-                    <Task handleComplete={handleComplete} key={tickets.id}></Task>
+                    {inProgress.map((ticket, index) => (
+                        <Task
+                            key={index}
+                            ticket={ticket}
+                            handleComplete={handleComplete}
+                        />
+                    ))}
                 </div>
                 <div>
                     <h1 className='text-2xl font-semibold'>Resolved Task</h1>

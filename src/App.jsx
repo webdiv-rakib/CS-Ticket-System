@@ -15,8 +15,17 @@ function App() {
       .then(data => setTickets(data))
   }, [])
 
-  const handleAddToInProgress = ticket => {
-    alert('card clicked');
+  const handleAddToInProgress = (ticket) => {
+    // Check if it's already there to avoid duplicates
+    const isExist = inProgress.find(item => item.id === ticket.id);
+
+    if (!isExist) {
+      const newInProgress = [...inProgress, ticket];
+      setInProgress(newInProgress);
+      alert(`${ticket.title} added to In-Progress`);
+    } else {
+      alert('This ticket is already in progress!');
+    }
   }
 
   const handleComplete = ticket => {
@@ -25,10 +34,11 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <Hero></Hero>
+      <Hero inProgressCount={inProgress.length} resolveCount={resolve.length}></Hero>
       <CustomerTickets
         tickets={tickets}
         handleAddToInProgress={handleAddToInProgress}
+        inProgress={inProgress}
         handleComplete={handleComplete}></CustomerTickets>
       <Footer></Footer>
     </>
