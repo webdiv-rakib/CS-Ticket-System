@@ -3,10 +3,20 @@ Simple responsive ticket management system build for an assignment.
 
 Uses Fake API for ticket data.
 
-## React Compiler
+## Questions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**1. What is JSX, and why is it used?**
+JSX (JavaScript XML) is a syntax extension for JavaScript that looks like HTML. It is used in React to describe what the UI should look like in a way that is easy for developers to read and write.
 
-## Expanding the ESLint configuration
+**2. What is the difference between State and Props?**
+- **State:** Data managed *locally* within a component that can change over time.
+- **Props:** Data passed *from a parent* component to a child component (read-only for the child).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**3. What is the useState hook, and how does it work?**
+`useState` is a React Hook that adds state to functional components. It returns an array with the current state value and a function to update that value.
+
+**4. How can you share state between components in React?**
+By "Lifting State Up"—moving the state to the nearest common parent component and passing it down as props.
+
+**5. How is event handling done in React?**
+Event handlers are written in camelCase (e.g., `onClick`) and receive a function as the handler instead of a string.
