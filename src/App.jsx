@@ -4,6 +4,8 @@ import Footer from './components/Footer/Footer'
 import Hero from './components/Hero/Hero'
 import NavBar from './components/NavBar/NavBar'
 import { useState, useEffect } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -22,9 +24,10 @@ function App() {
     if (!isExist) {
       const newInProgress = [...inProgress, ticket];
       setInProgress(newInProgress);
-      alert(`${ticket.title} added to In-Progress`);
-    } else {
-      alert('This ticket is already in progress!');
+      toast.info(`"${ticket.title}" added to Task Status!`);
+    }
+    else {
+      toast.error("This ticket is already in progress.");
     }
   }
 
@@ -33,6 +36,7 @@ function App() {
   }
   return (
     <>
+      <ToastContainer></ToastContainer>
       <NavBar></NavBar>
       <Hero inProgressCount={inProgress.length} resolveCount={resolve.length}></Hero>
       <CustomerTickets
