@@ -29,14 +29,17 @@ function App() {
     const isExist = inProgress.find(item => item.id === ticket.id);
 
     if (!isExist) {
-      const newInProgress = [...inProgress, ticket];
-      setInProgress(newInProgress);
-      toast.info(`"${ticket.title}" added to Task Status!`);
+      const updatedTicket = { ...ticket, status: "In Progress" };
+      setInProgress([...inProgress, updatedTicket]);
+      const updatedTickets = tickets.map(t =>
+        t.id === ticket.id ? { ...t, status: "In Progress" } : t
+      );
+      setTickets(updatedTickets);
+      toast.info(`"${ticket.title}" is now In Progress!`);
+    } else {
+      toast.warn("This ticket is already being handled.");
     }
-    else {
-      toast.error("This ticket is already in progress.");
-    }
-  }
+  };
 
   // handle click on complete
   const handleComplete = (ticket) => {
