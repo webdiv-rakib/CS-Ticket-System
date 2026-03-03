@@ -8,15 +8,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  // useState for handle ticket data
   const [tickets, setTickets] = useState([]);
+
+  // useState for progress
   const [inProgress, setInProgress] = useState([]);
+
+  // useState for resolve
   const [resolve, setResolve] = useState([]);
+
+  // data fetched here
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setTickets(data))
   }, [])
 
+  // handle click on card
   const handleAddToInProgress = (ticket) => {
     const isExist = inProgress.find(item => item.id === ticket.id);
 
@@ -30,6 +38,7 @@ function App() {
     }
   }
 
+  // handle click on complete
   const handleComplete = (ticket) => {
     const remainingInProgress = inProgress.filter(item => item.id !== ticket.id);
     setInProgress(remainingInProgress);
@@ -54,6 +63,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
+
       <NavBar></NavBar>
 
       <Hero
