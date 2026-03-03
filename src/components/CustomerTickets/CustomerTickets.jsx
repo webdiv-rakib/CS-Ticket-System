@@ -13,7 +13,7 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inPro
                     }
                 </div>
             </div>
-            <div className='md:w-1/4 space-y-5'>
+            <div className='md:w-1/4 md:space-y-5 px-5 mt-5 space-y-10'>
                 <div>
                     <h1 className='text-2xl font-semibold'>Task Status</h1>
                     <p className='text-gray-400'>Select a ticket to add to Task Status</p>
