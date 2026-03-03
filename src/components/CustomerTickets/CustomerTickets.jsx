@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
 import CustomerTicket from '../CustomerTicket/CustomerTicket';
+import Task from '../Task/Task';
 
 
-const CustomerTickets = () => {
-    const [datas, setData] = useState([]);
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, [])
+const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete }) => {
     return (
         <div className='flex justify-between gap-10 px-30 mt-10'>
             <div className='md:w-3/4'>
-                <h1 className='text-3xl font-semibold'>Customer Tickets: {datas.length}</h1>
+                <h1 className='text-3xl font-semibold'>Customer Tickets: {tickets.length}</h1>
                 <div className='grid grid-cols-2 gap-8 mt-5'>
                     {
-                        datas.map(data => <CustomerTicket key={data.id} data={data}></CustomerTicket>)
+                        tickets.map(ticket => <CustomerTicket key={ticket.id} ticket={ticket} handleAddToInProgress={handleAddToInProgress}></CustomerTicket>)
                     }
                 </div>
             </div>
@@ -23,6 +17,7 @@ const CustomerTickets = () => {
                 <div>
                     <h1 className='text-2xl font-semibold'>Task Status</h1>
                     <p className='text-gray-400'>Select a ticket to add to Task Status</p>
+                    <Task handleComplete={handleComplete} key={tickets.id}></Task>
                 </div>
                 <div>
                     <h1 className='text-2xl font-semibold'>Resolved Task</h1>

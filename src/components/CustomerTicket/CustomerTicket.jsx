@@ -1,10 +1,10 @@
 import React from 'react';
 import { SlCalender } from "react-icons/sl";
-const CustomerTicket = ({ data }) => {
-    const { id, title, description, customer, priority, status, createdAt } = data
+const CustomerTicket = ({ ticket, handleAddToInProgress }) => {
+    const { id, title, description, customer, priority, status, createdAt } = ticket
     return (
-        <div className="card bg-base-300 shadow-xl">
-            <div className="card-body space-y-5">
+        <div className="card bg-base-300 shadow-xl" onClick={() => handleAddToInProgress(ticket)}>
+            <div className="card-body space-y-2">
                 <div className='flex justify-between'>
                     <div>
                         <h1 className='text-2xl font-semibold'>{title}</h1>
