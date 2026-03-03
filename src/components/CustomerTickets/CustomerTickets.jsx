@@ -4,10 +4,10 @@ import Task from '../Task/Task';
 
 const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inProgress, resolve }) => {
     return (
-        <div className='flex justify-between gap-10 px-30 mt-10'>
-            <div className='md:w-3/4'>
-                <h1 className='text-3xl font-semibold'>Customer Tickets</h1>
-                <div className='grid grid-cols-2 gap-8 mt-5'>
+        <div className='md:flex md:justify-between md:gap-10 md:px-30 md:mt-10 mt-5'>
+            <div className='md:w-3/4 p-2'>
+                <h1 className='text-3xl font-semibold text-center md:text-left'>Customer Tickets</h1>
+                <div className='md:grid md:grid-cols-2 md:gap-8 md:mt-5 flex flex-col gap-2 mt-3'>
                     {
                         tickets.map(ticket => <CustomerTicket key={ticket.id} ticket={ticket} handleAddToInProgress={handleAddToInProgress}></CustomerTicket>)
                     }
@@ -28,9 +28,11 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inPro
                 <div>
                     <h1 className='text-2xl font-semibold'>Resolved Task</h1>
                     <p className='text-gray-400'>No resolved Tasks yet</p>
-                    {
-                        resolve.map(ticket => <ResolvedTask key={resolve.id} ticket={ticket}></ResolvedTask>)
-                    }
+                    <div>
+                        {
+                            resolve.map(ticket => <ResolvedTask key={resolve.id} ticket={ticket}></ResolvedTask>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

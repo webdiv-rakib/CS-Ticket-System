@@ -12,11 +12,11 @@ const CustomerTicket = ({ ticket, handleAddToInProgress }) => {
     return (
         <div className="card bg-base-300 shadow-xl" onClick={() => handleAddToInProgress(ticket)}>
             <div className="card-body space-y-2">
-                <div className='flex justify-between'>
+                <div className='md:flex md:justify-between md:items-center'>
                     <div>
                         <h1 className='text-2xl font-semibold'>{title}</h1>
                     </div>
-                    <div className={`p-2 rounded-2xl font-bold text-xs uppercase shadow-sm ${statusBg} flex items-center gap-1`}>
+                    <div className={`p-2 rounded-2xl font-bold text-xs uppercase shadow-sm ${statusBg} flex items-center gap-1 w-max mt-2`}>
                         <div>
                             <GoDotFill></GoDotFill>
                         </div>
@@ -39,7 +39,7 @@ const CustomerTicket = ({ ticket, handleAddToInProgress }) => {
                     </div>
 
 
-                    <div className='flex items-center gap-2'>
+                    <div className='md:flex md:items-center gap-2'>
                         <div>
                             <p>{customer}</p>
                         </div>
