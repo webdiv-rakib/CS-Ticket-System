@@ -18,7 +18,6 @@ function App() {
   }, [])
 
   const handleAddToInProgress = (ticket) => {
-    // Check if it's already there to avoid duplicates
     const isExist = inProgress.find(item => item.id === ticket.id);
 
     if (!isExist) {
@@ -31,19 +30,42 @@ function App() {
     }
   }
 
-  const handleComplete = ticket => {
-    alert('button clicked')
-  }
+  const handleComplete = (ticket) => {
+    const remainingInProgress = inProgress.filter(item => item.id !== ticket.id);
+    setInProgress(remainingInProgress);
+    setResolve([...resolve, ticket]);
+
+    const remainingTickets = tickets.filter(item => item.id !== ticket.id);
+    setTickets(remainingTickets);
+    toast.success(`Ticket #${ticket.id} Resolved Successfully!`);
+  };
+
   return (
     <>
-      <ToastContainer></ToastContainer>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <NavBar></NavBar>
-      <Hero inProgressCount={inProgress.length} resolveCount={resolve.length}></Hero>
+
+      <Hero
+        inProgressCount={inProgress.length} resolveCount={resolve.length}></Hero>
+
       <CustomerTickets
         tickets={tickets}
         handleAddToInProgress={handleAddToInProgress}
         inProgress={inProgress}
+        resolve={resolve}
         handleComplete={handleComplete}></CustomerTickets>
+
       <Footer></Footer>
     </>
   )
