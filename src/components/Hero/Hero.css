@@ -1,0 +1,13 @@
+.bg-in-progress-1 {
+    background-image: url(../../assets/vector1.png), linear-gradient(135deg, #422AD5 0%, #6A54F0 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #422AD5;
+}
+
+.bg-resolve {
+    background-image: url(../../assets/vector1.png), linear-gradient(135deg, #10B981 0%, #059669 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #422AD5;
+}
