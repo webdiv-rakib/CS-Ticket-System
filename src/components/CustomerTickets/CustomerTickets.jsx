@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CustomerTicket from '../CustomerTicket/CustomerTicket';
 
+
 const CustomerTickets = () => {
     const [datas, setData] = useState([]);
     useEffect(() => {
@@ -11,8 +12,8 @@ const CustomerTickets = () => {
     return (
         <div className='flex justify-between gap-10 px-30 mt-10'>
             <div className='md:w-3/4'>
-                <h1 className='text-2xl font-semibold'>Customer Tickets: {datas.length}</h1>
-                <div className='grid grid-cols-2 gap-5'>
+                <h1 className='text-3xl font-semibold'>Customer Tickets: {datas.length}</h1>
+                <div className='grid grid-cols-2 gap-8 mt-5'>
                     {
                         datas.map(data => <CustomerTicket key={data.id} data={data}></CustomerTicket>)
                     }
