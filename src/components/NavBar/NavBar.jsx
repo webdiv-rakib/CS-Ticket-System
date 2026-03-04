@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className="navbar shadow-sm inter md:flex justify-between px-4 md:px-30">
+        <div className="navbar shadow-sm md:flex justify-between px-4 md:px-30">
             <div>
                 <a className="text-2xl font-bold cursor-pointer">CS Ticket System</a>
             </div>
