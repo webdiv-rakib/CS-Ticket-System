@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ResolvedTask = ({ ticket }) => {
     return (
         <div className='card p-2 bg-[#e0e7ff] space-y-2 mt-5'>

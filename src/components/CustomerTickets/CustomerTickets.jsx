@@ -6,7 +6,7 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inPro
     return (
         <div className='md:flex md:justify-between md:gap-10 md:px-30 md:mt-10 mt-5'>
             <div className='md:w-3/4 p-2'>
-                <h1 className='text-3xl font-semibold text-center md:text-left'>Customer Tickets</h1>
+                <h1 className='text-3xl font-semibold text-center md:text-left'>Customer Tickets:{tickets.length}</h1>
                 <div className='md:grid md:grid-cols-2 md:gap-8 md:mt-5 flex flex-col gap-2 mt-3'>
                     {
                         tickets.map(ticket => <CustomerTicket key={ticket.id} ticket={ticket} handleAddToInProgress={handleAddToInProgress}></CustomerTicket>)
