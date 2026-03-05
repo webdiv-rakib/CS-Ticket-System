@@ -16,7 +16,9 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inPro
             <div className='md:w-1/4 md:space-y-5 px-5 mt-5 space-y-10'>
                 <div>
                     <h1 className='text-2xl font-semibold'>Task Status</h1>
-                    <p className='text-gray-400'>Select a ticket to add to Task Status</p>
+                    {inProgress.length === 0 && (
+                        <p className='text-gray-400'>Select a ticket to add to Task Status</p>
+                    )}
                     {inProgress.map((ticket, index) => (
                         <Task
                             key={index}
@@ -27,10 +29,14 @@ const CustomerTickets = ({ tickets, handleAddToInProgress, handleComplete, inPro
                 </div>
                 <div>
                     <h1 className='text-2xl font-semibold'>Resolved Task</h1>
-                    <p className='text-gray-400'>No resolved Tasks yet</p>
+                    {resolve.length === 0 && (
+                        <p className='text-gray-400'>No resolved Tasks yet</p>
+                    )}
                     <div>
                         {
-                            resolve.map(ticket => <ResolvedTask key={resolve.id} ticket={ticket}></ResolvedTask>)
+                            resolve.map((ticket, index) => (
+                                <ResolvedTask key={index} ticket={ticket} />
+                            ))
                         }
                     </div>
                 </div>
